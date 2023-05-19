@@ -21,7 +21,7 @@ router.get('/:id',asyncHandler(async(req,res)=>{
     }else{
         res.status(404).json({message:'Product not found'})
     }
-    res.json(product)
+    //res.json(product)
 }))
 router.delete('/delete/:id',asyncHandler(async(req,res)=>{
     const product=await Product.findByIdAndDelete(req.params.id)
